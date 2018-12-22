@@ -1,6 +1,6 @@
 window.GLOBAL_DATA = {
-    game: null
-}
+    game: null,
+};
 
 // 启用碰撞
 // var manager = cc.director.getCollisionManager();
@@ -8,8 +8,15 @@ window.GLOBAL_DATA = {
 // manager.enabledDebugDraw = true;
 
 // 物理引擎
-cc.director.getPhysicsManager().enabled = true
+setTimeout(() => {
+
+    console.log(cc.director);
+    console.log(cc.director.getPhysicsManager());
+    cc.director.getPhysicsManager().enabled = true;
+    // cc.director.getPhysicsManager().debugDrawFlags = 0;
+
+}, 1000);
+
 // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit
-cc.director.getPhysicsManager().debugDrawFlags = 0
 // 设置重力
 // cc.director.getPhysicsManager().gravity = cc.v2();
